@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="img/favicon/site.webmanifest">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Roboto+Flex:opsz,wght@8..144,100;8..144,400&display=swap" rel="stylesheet">
+    <title>Randomeal: The last resort when you're hungry</title>
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+            <div class="header-left">
+                <a href="/" class="logo">
+                    <img
+                        srcset="img/logo/logo-320w.png,
+                                img/logo/logo-480w.png 1.5x,
+                                img/logo/logo-640w.png 2x"
+                        src="img/logo/logo-640w.png" 
+                        alt="Randomeal logo.">
+                    <span class="logo-text">Randomeal</span>
+                </a>
+            </div>
+            <div class="header-right">
+                <nav>    
+                    <a class="nav-item active" href="/">Home</a>
+                    <a title="Click for details" class="nav-item has-modal" id="about-challenge"
+                        data-info="Part of the #100DaysOfCode which has 2 main rules: code minimum an hour every day for the next 100 days and tweet your progress every day with the #100DaysOfCode hashtag."
+                        data-footer="<a class='details-text' href='https://www.100daysofcode.com/' target='_blank' rel='noopener noreferrer'>#100DaysOfCode details</a>">About Challenge</a>
+                    <a title="Click for details" class="nav-item has-modal" id="about-project"
+                        data-info="This project was inspired by the front-end web developer Florin Pop and his #100Days100Projects challenge. Randomeal is meant as a project to explore interesting web designs and test a few things, like modals and the fetch API."
+                        data-footer="More about <a class='details-text' href='https://www.florin-pop.com/' target='_blank' rel='noopener noreferrer'>Forin Pop</a>">About Project</a>
+                    <a title="Click for details" class="nav-item has-modal" id="about-me"
+                        data-info="Husband, coder, cat-father, traveler, book enjoyer, runner, biker, rock music lover. I've been coding since I was 9 years old and I'm always ready to learn new things."
+                        data-footer="More about <a class='details-text' href='https://www.linkedin.com/in/laur-marian-mertea/' target='_blank' rel='noopener noreferrer'>me</a>">About Me</a>
+                </nav>
+            </div>
+        </header>
+
+        <main>
+            <div class="inner">
+                <div class="cta-holder">
+                    <h1 class="cta-message">In a hurry and
+                        <span class="outer__button button__top-bottom cta-button" id="get_random_meal">
+                            <span class="cta" title="Click to get a random meal!">hungry</span>
+                        </span>?</h1>
+                </div>
+
+                <article>
+                    <div class="meal" id="meal"></div>
+                </article>
+            </div>
+
+            <div id="info-modal" class="modal">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <span class="close">&times;</span>
+                        <h2 id="modal-header"></h2>
+                    </div>
+                    <div class="modal-body">
+                        <div id="modal-body"></div>
+                    </div>
+                    <div class="modal-footer">
+                        <h3 id="modal-footer"></h3>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <div class="footer-left">
+                <ul class="links-list social-links">
+                    <li class="bottom-item">
+                        <a class="social-item"
+                            href="https://github.com/laurmertea"
+                            target="_blank" rel="noopener noreferrer">
+                            <img src="/img/social/github.png" alt="Github account" width="40">
+                            <img src="/img/social/github_col.png" class="item-top" alt="Github account" width="40">
+                        </a>
+                    </li>
+                    <li class="bottom-item">
+                        <a class="social-item"
+                            href="https://www.linkedin.com/in/laur-marian-mertea/"
+                            target="_blank" rel="noopener noreferrer">
+                            <img src="/img/social/linkedin.png" alt="Linkedin profile" width="40">
+                            <img src="/img/social/linkedin_col.png" class="item-top" alt="Linkedin profile" width="40">
+                        </a>
+                    </li>
+                    <li class="bottom-item">
+                        <a class="social-item"
+                            href="https://twitter.com/d86_fw"
+                            target="_blank" rel="noopener noreferrer">
+                            <img src="/img/social/twitter.png" alt="Twitter profile" width="40">
+                            <img src="/img/social/twitter_col.png" class="item-top" alt="Twitter profile" width="40">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer-right">
+                <ul class="links-list about-links">
+                    <li class="bottom-item">
+                        <a title="Click for details" class="has-modal" id="about-resources"
+                            data-info="The data used by this project comes from TheMealDB. Some of the assets used in this project were either, created through favicon.io, converted through cloudconvert.com or downloaded from flaticon.com ."
+                            data-footer="Mostly, this project was made with help from StackOverflow, W3Schools, mdn web docs and Medium.">Resources Used</a>
+                    </li>
+                    <li class="bottom-item">
+                        <a title="Click for details" class="has-modal" id="about-copyright"
+                            data-info="Linkedin icons created by NajmunNahar - Flaticon . Github icons created by Freepik - Flaticon . Twitter icons created by NajmunNahar - Flaticon . Main background image from www.hindfateh.com ."
+                            data-footer="This project is licensed with the MIT License.">Copyright</a>
+                    </li>
+                </ul>
+            </div>
+        </footer>
+
+        <script>
+            var modal = document.getElementById("info-modal");
+            var haveModal = document.getElementsByClassName("has-modal");
+            var span = document.getElementsByClassName("close")[0];
+
+            var openModal = function() {
+                document.getElementById("modal-header").innerHTML = this.text;
+                document.getElementById("modal-body").innerHTML = this.getAttribute("data-info");
+                document.getElementById("modal-footer").innerHTML = this.getAttribute("data-footer");
+
+                modal.style.display = "block";
+            }
+            
+            Array.from(haveModal).forEach(function (hasModal) {
+                hasModal.addEventListener('click', openModal);
+            });
+
+            span.onclick = function () {
+                modal.style.display = "none";
+            }
+
+            window.onclick = function (event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            }
+        </script>
+
+        <script>
+            const get_meal_btn = document.getElementById('get_random_meal');
+                const meal_container = document.getElementById('meal');
+
+                get_random_meal.addEventListener('click', () => {
+                    fetch('https://www.themealdb.com/api/json/v1/1/random.php')
+                        .then(res => res.json())
+                        .then(res => {
+                            createMeal(res.meals[0]);
+                        })
+                        .catch(e => {
+                            console.warn(e);
+                        });
+                });
+
+                const createMeal = meal => {
+                    const ingredients = [];
+
+                    for (let i = 1; i <= 20; i++) {
+                        if (meal[`strIngredient${i}`]) {
+                            ingredients.push(
+                                `${meal[`strIngredient${i}`]} - ${meal[`strMeasure${i}`]}`
+                            );
+                        } else {
+                            break;
+                        }
+                    }
+
+                    const newInnerHTML = `
+                <div class="meal-details">
+                    <div class="meal-left-side">
+                        <img src="${meal.strMealThumb}" alt="Meal Image">
+                        ${meal.strCategory
+                            ? `<h4><strong>Category:</strong> ${meal.strCategory}</h4>`
+                            : ''
+                        }
+                        ${meal.strArea ? `<h4><strong>Area:</strong> ${meal.strArea}</h4>` : ''}
+                        ${meal.strTags
+                            ? `<h4><strong>Tags:</strong> ${meal.strTags
+                                .split(',')
+                                .join(', ')}</h4>`
+                            : ''
+                        }
+                        <h3>Ingredients:</h3>
+                        <ul class="ingredients-list">
+                            ${ingredients.map(ingredient => `<li>${ingredient}</li>`).join('')}
+                        </ul>
+                    </div>
+                    <div class="meal-right-side">
+                        <h2>${meal.strMeal}</h2>
+                        <p>${meal.strInstructions}</p>
+                    </div>
+                </div>
+                ${meal.strYoutube
+                            ? `
+                <div class="row video-area">
+                    <h3>Video Recipe</h3>
+                    <div class="videoWrapper">
+                        <iframe width="420" height="315"
+                        src="https://www.youtube.com/embed/${meal.strYoutube.slice(-11)}">
+                        </iframe>
+                    </div>
+                </div>`
+                            : ''
+                        }
+            `;
+
+                    meal_container.innerHTML = newInnerHTML;
+                };
+        </script>
+    </div>
+</body>
+</html>
