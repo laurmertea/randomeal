@@ -30,7 +30,8 @@ In version 1.0, based on the data that we can get through a [Fetch](https://deve
 ## Future versions
 
 ### Features
-You should be able to select a few things about yourself and the meal you're interested in, in case you want to reduce the random factor and/or have intolerances / allergies.
+- you should be able to select a few things about yourself and the meal you're interested in, in case you want to reduce the random factor and/or have intolerances / allergies;
+- you should be able to use it on mobile and small displays.
 
 ### Improvements
 - improve modals and data passing;
